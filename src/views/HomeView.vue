@@ -3,28 +3,27 @@ import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import api from "../api";
 
-const search = ref("")
-const movies = ref([])
+const search = ref("");
+const movies = ref([]);
 
 const searchMovie = () => {
   if (movies.value != " ") {
     fetch(`https://www.omdbapi.com/?apiKey=${api.apiKey}&s=${search.value}`)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
   }
-  
-}
+};
 </script>
 
 <template>
-  <div class="grid md:grid-cols-2 ml-12 mr-12 pt-14 m-auto sm:grid-cols-2">
+  <div class="grid md:grid-cols-2 ml-10 mr-10 pt-14 m-auto sm:grid-cols-2">
     <div>
       <img src="../assets/guardian.jpg" alt="Gardian Of Galaxy" />
     </div>
 
-    <div class="pl-10 mt-10">
+    <div class="ml-10 mt-5">
       <h1 class="text-white text-4xl font-semibold tracking-wide pb-4">
         Guadians Of The Galaxy
       </h1>
@@ -42,27 +41,31 @@ const searchMovie = () => {
         of extraterrestrial criminals go on the run after stealing a powerful
         artifact.
       </p>
-      <div class="md:gap-2 sm:gap-2 space-x-4">
-        <RouterLink to="/movie/a814f15d">
+      <div class="gap-6 flex flex-wrap">
+        <div>
+          <RouterLink to="/movie/a814f15d">
+            <button
+              class="bg-white text-primary p-2 rounded-full w-40 mt-8 font-semibold tracking-wider hover:bg-primary hover:text-white hover:border hover:border-1 hover:border-white"
+            >
+              Movie details
+            </button>
+          </RouterLink>
+        </div>
+        <div>
           <button
-            class="bg-white text-primary p-2 rounded-full w-40 mt-8 font-semibold tracking-wider hover:bg-primary hover:text-white hover:border hover:border-1 hover:border-white"
+            class="hover:bg-white hover:text-primary p-2 rounded-full w-40 mt-8 font-semibold tracking-wider bg-primary text-white border border-1 border-white"
           >
-            Movie details
+            Play Now
           </button>
-        </RouterLink>
-        <button
-          class="hover:bg-white hover:text-primary p-2 rounded-full w-40 mt-8 font-semibold tracking-wider bg-primary text-white border border-1 border-white"
-        >
-          Play Now
-        </button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="flex flex-wrap gap-4 text-center justify-center pt-20 space-y-10">
-    <form @submit="searchMovie">
+  <div class="flex flex-wrap gap-4 text-center justify-center pt-20">
+    <form @submit.prevent="searchMovie">
       <input
         v-model="search"
-        class="bg-primary border border-1 border-white rounded-full p-2 w-96 outline-none text-gray-400"
+        class="input bg-primary border border-1 border-white rounded-full p-2 w-96 outline-none text-gray-400"
         type="text"
         placeholder="What are you looking?"
       />
@@ -73,7 +76,7 @@ const searchMovie = () => {
       </button>
     </form>
   </div>
-  <div class="pt-8 ml-12 mr-12">
+  <div class="pt-8 ml-12 mr-12 text-center">
     <h2 class="text-white uppercase underline">Movies and series</h2>
   </div>
 </template>
