@@ -11,7 +11,8 @@ const searchMovie = () => {
     fetch(`https://www.omdbapi.com/?apiKey=${api.apiKey}&s=${search.value}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        movies.value = data.Search;
+        search.value = "";
       });
   }
 };
@@ -61,8 +62,11 @@ const searchMovie = () => {
       </div>
     </div>
   </div>
-  <div class="flex flex-wrap gap-4 text-center justify-center pt-20">
-    <form @submit.prevent="searchMovie">
+  <div class="pt-20">
+    <form
+      @submit.prevent="searchMovie"
+      class="ml-2 mr-2 flex flex-wrap gap-4 text-center justify-center"
+    >
       <input
         v-model="search"
         class="input bg-primary border border-1 border-white rounded-full p-2 w-96 outline-none text-gray-400"
@@ -78,5 +82,27 @@ const searchMovie = () => {
   </div>
   <div class="pt-8 ml-12 mr-12 text-center">
     <h2 class="text-white uppercase underline">Movies and series</h2>
+  </div>
+  <div class="flex flex-wrap ml-4 mr-4">
+    <div
+      class="max-w-md flex-1 basis-12 pt-10 pb-10 pl-4 pr-4"
+      v-for="movie in movies"
+      :key="movie.imdbID"
+    >
+      <RouterLink :to="'/movie/' + movie.imdbID" class="flex flex-col h-full">
+        <div>
+          <img :src="movie.Poster" alt="" />
+        </div>
+        <div
+          class="bg-secondary text-primary uppercase p-1 mt-6 text-center rounded-md font-medium"
+        >
+          {{ movie.Type }}
+        </div>
+        <div class="flex flex-wrap mt-4 gap-2 font-normal">
+          <p class="text-gray-400"><span>Released - </span>{{ movie.Year }}</p>
+          <h3 class="text-gray-400 font-medium text-base">{{ movie.Title }}</h3>
+        </div>
+      </RouterLink>
+    </div>
   </div>
 </template>
