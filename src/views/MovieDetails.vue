@@ -17,7 +17,7 @@ onBeforeMount(() => {
 })
 </script>
 <template>
-    <div class="flex pt-10 gap-12 ml-8 mr-8">
+    <div class="flex shrink pt-10 gap-12 ml-6 mr-6 select-none">
         <img :src="movie.Poster" :alt="movie.Poster">
         <div class="text-gray-300 gap-4">
         <h1 class="text-4xl font-bold mb-4"><span class="text-university">Title:</span> {{ movie.Title }}</h1>
