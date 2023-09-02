@@ -27,8 +27,8 @@ const searchMovie = () => {
     </div>
 
     <div class="ml-4 mr-4 mt-5">
-      <h1 class="text-white text-4xl font-semibold tracking-wide pb-4">
-        Guadians Of The Galaxy
+      <h1 class="text-white text-3xl font-semibold tracking-wide pb-4">
+        Guardians Of The Galaxy
       </h1>
       <p class="text-white text-sm">
         Guardians of the Galaxy (retroactively referred to as Guardians of the
