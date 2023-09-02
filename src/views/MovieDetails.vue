@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue';
-import { useRoute } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 import api from '../api';
 
 const movie = ref({})
@@ -17,9 +17,9 @@ onBeforeMount(() => {
 })
 </script>
 <template>
-    <div class="flex shrink pt-10 gap-12 ml-6 mr-6 select-none">
+    <div class="flex gap-8 m-10 select-none">
         <img :src="movie.Poster" :alt="movie.Poster">
-        <div class="text-gray-300 gap-4">
+        <div to="" class="text-gray-300 gap-4">
         <h1 class="text-4xl font-bold mb-4"><span class="text-university">Title:</span> {{ movie.Title }}</h1>
         <p class="text-university font-semibold">Actors: <span class="font-light text-gray-300">{{ movie.Actors }}</span></p>
         <p class="text-university font-semibold">Released year: <span class="font-light text-gray-300">{{ movie.Released }}</span></p>

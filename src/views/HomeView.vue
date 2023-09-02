@@ -1,10 +1,11 @@
 <script setup>
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
+import { useRoute, RouterLink } from "vue-router";
 import api from "../api";
 
 const search = ref("");
 const movies = ref([]);
+
 
 const searchMovie = () => {
   if (movies.value != " ") {
@@ -16,6 +17,7 @@ const searchMovie = () => {
       });
   }
 };
+
 </script>
 
 <template>
@@ -44,7 +46,7 @@ const searchMovie = () => {
       </p>
       <div class="gap-6 flex flex-wrap">
         <div>
-          <RouterLink to="/movie/a814f15d">
+          <RouterLink to="">
             <button
               class="bg-university text-white p-2 rounded-full w-40 mt-8 font-semibold tracking-wider hover:bg-primary hover:border hover:border-1 hover:border-university"
             >

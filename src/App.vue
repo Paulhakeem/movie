@@ -6,7 +6,7 @@ const showMenu = ref(false)
 
 <template>
   <div id="app" class="">
-  <div class="justify-start">
+  <div class="justify-start sticky top-0">
     <div class="">
       <nav class="flex container px-5 py-5">
         <ul class=" justify-start flex flex-grow space-x-4">
@@ -15,12 +15,12 @@ const showMenu = ref(false)
               href="/"
               class="flex space-x-3 md:mr-5"
               >
-            <h1 class="text-4xl text-white font-semibold">Hakeem<span class="text-university">Movies</span></h1>
+            <h1 class="text-4xl text-white font-semibold ml-5">Hakeem<span class="text-university">Movies</span></h1>
                 
             </a>
           </li>
         </ul>
-        <ul class="flex space-x-5">
+        <ul class="flex space-x-5 pt-3">
           <li class="hidden sm:flex">
             <RouterLink to="/"
               class="text-gray-200 hover:text-university text font-semibold py-1 px-3"
