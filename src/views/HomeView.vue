@@ -26,9 +26,9 @@ const searchMovie = () => {
       <img src="../assets/guardian.jpg" alt="Gardian Of Galaxy" />
     </div>
 
-    <div class="ml-10 mt-5">
+    <div class="mt-5">
       <h1 class="text-white text-4xl font-semibold tracking-wide pb-4">
-        Guadians Of The Galaxy
+        Guardians Of The Galaxy
       </h1>
       <p class="text-white text-sm">
         Guardians of the Galaxy (retroactively referred to as Guardians of the
