@@ -9,7 +9,9 @@ export default {
       colors: {
         'primary': '#171d29',
         'secondary': '#38bdf8',
-        'college': '#005aa7'
+        'college': '#005aa7',
+        'university': '#db418b',
+        'showmax': '#548697'
       }
       
     },

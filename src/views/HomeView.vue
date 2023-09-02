@@ -46,7 +46,7 @@ const searchMovie = () => {
         <div>
           <RouterLink to="/movie/a814f15d">
             <button
-              class="bg-white text-primary p-2 rounded-full w-40 mt-8 font-semibold tracking-wider hover:bg-primary hover:text-white hover:border hover:border-1 hover:border-white"
+              class="bg-university text-white p-2 rounded-full w-40 mt-8 font-semibold tracking-wider hover:bg-primary hover:border hover:border-1 hover:border-university"
             >
               Movie details
             </button>
@@ -54,7 +54,7 @@ const searchMovie = () => {
         </div>
         <div>
           <button
-            class="hover:bg-white hover:text-primary p-2 rounded-full w-40 mt-8 font-semibold tracking-wider bg-primary text-white border border-1 border-white"
+            class="hover:bg-university p-2 rounded-full w-40 mt-8 font-semibold tracking-wider text-white border border-1 border-university"
           >
             Play Now
           </button>
@@ -69,19 +69,23 @@ const searchMovie = () => {
     >
       <input
         v-model="search"
-        class="input bg-primary border border-1 border-white rounded-full p-2 w-96 outline-none text-gray-400"
+        class="input bg-primary border border-1 border-white rounded-full p-2 w-96 outline-none text-gray-400 hover:border-university"
         type="text"
         placeholder="What are you looking?"
       />
       <button
-        class="ml-4 bg-white text-primary rounded-full p-2 font-semibold w-56"
+        class="ml-4 bg-university text-white rounded-full p-2 font-semibold w-56"
       >
         Search
       </button>
     </form>
   </div>
-  <div class="pt-8 ml-12 mr-12 text-center">
-    <h2 class="text-white uppercase underline">Movies and series</h2>
+  <div class="pt-8 ml-12 mr-12 text-center justify-center items-center">
+    <h2
+      class="text-white uppercase border-2 border-university p-1 w-full rounded-md"
+    >
+      Movies and series
+    </h2>
   </div>
   <div class="flex flex-wrap ml-4 mr-4">
     <div
@@ -94,12 +98,11 @@ const searchMovie = () => {
           <img :src="movie.Poster" alt="" />
         </div>
         <div
-          class="bg-secondary text-primary uppercase p-1 mt-6 text-center rounded-md font-medium"
+          class="bg-university text-white uppercase p-0.2 mt-6 text-center rounded-md"
         >
           {{ movie.Type }}
         </div>
         <div class="flex flex-wrap mt-4 gap-2 font-normal">
-          <p class="text-gray-400"><span>Released - </span>{{ movie.Year }}</p>
           <h3 class="text-gray-400 font-medium text-base">{{ movie.Title }}</h3>
         </div>
       </RouterLink>
