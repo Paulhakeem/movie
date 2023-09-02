@@ -21,14 +21,14 @@ const searchMovie = () => {
 </script>
 
 <template>
-  <div class="grid md:grid-cols-2 ml-10 mr-10 pt-14 m-auto sm:grid-cols-2">
+  <div class="grid md:grid-cols-2 ml-6 mr-6 pt-14 m-auto sm:grid-cols-2">
     <div>
-      <img src="../assets/guardian.jpg" alt="Gardian Of Galaxy" />
+      <img src="../assets/guardian.jpg" alt="Gardian Of Galaxy" class=""/>
     </div>
 
-    <div class="mt-5">
+    <div class="ml-4 mr-4 mt-5">
       <h1 class="text-white text-4xl font-semibold tracking-wide pb-4">
-        Guardians Of The Galaxy
+        Guadians Of The Galaxy
       </h1>
       <p class="text-white text-sm">
         Guardians of the Galaxy (retroactively referred to as Guardians of the

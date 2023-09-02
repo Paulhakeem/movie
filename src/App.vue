@@ -15,7 +15,7 @@ const showMenu = ref(false)
               href="/"
               class="flex space-x-3 md:mr-5"
               >
-            <h1 class="text-4xl text-white font-semibold ml-5">Hakeem<span class="text-university">Movies</span></h1>
+            <h1 class="text-4xl text-white font-semibold">Hakeem<span class="text-university">Movies</span></h1>
                 
             </a>
           </li>
