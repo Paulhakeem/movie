@@ -5,3 +5,10 @@
 body {
     background-color: #171d29;
 }
+@media  (max-width: 768px) {
+    .movie {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: start;
+    }
+}
