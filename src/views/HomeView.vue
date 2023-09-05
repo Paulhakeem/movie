@@ -73,7 +73,7 @@ const searchMovie = () => {
         v-model="search"
         class="input bg-primary border border-1 border-white rounded-full p-2 w-96 outline-none text-gray-400 hover:border-university"
         type="text"
-        placeholder="What are you looking?"
+        placeholder="Looking for a movie?"
       />
       <button
         class="ml-4 bg-university text-white rounded-full p-2 font-semibold w-56"
