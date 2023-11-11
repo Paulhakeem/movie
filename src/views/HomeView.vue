@@ -1,11 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useRoute, RouterLink } from "vue-router";
 import api from "../api";
 
 const search = ref("");
 const movies = ref([]);
-
 
 const searchMovie = () => {
   if (movies.value != " ") {
@@ -89,7 +88,8 @@ const searchMovie = () => {
       Movies and series
     </h2>
   </div>
-  <div class="flex flex-wrap ml-4 mr-4">
+  <Suspense>
+    <div class="flex flex-wrap ml-4 mr-4">
     <div
       class="max-w-md flex-1 basis-12 pt-10 pb-10 pl-4 pr-4"
       v-for="movie in movies"
@@ -110,4 +110,9 @@ const searchMovie = () => {
       </RouterLink>
     </div>
   </div>
+    <template #fallback>
+     <div class="w-20 h-20 border-2 border-university border-dotted animate-spin rounded-full"></div>
+    </template>
+  </Suspense>
+  
 </template>
